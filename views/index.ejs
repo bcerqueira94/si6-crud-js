@@ -2,35 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>MY APP</title>
+  <title>Star Wars - Battle Quotes</title> 
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
 <body>
-  May Node and Express be with you.
 
-  <ul class="quotes">
-  <% for(var i=0; i<quotes.length; i++) {%>
-    <li class="quote">
-      <span><%= quotes[i].name %></span>
-      <span><%= quotes[i].quote %></span>
-    </li>
-  <% } %>
-  </ul>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-3">
 
-  <form action="/quotes" method="POST">
-    <input type="text" placeholder="name" name="name">
-    <input type="text" placeholder="quote" name="quote">
-    <button type="submit">Submit</button>
-  </form>
+                    <div>
+                        <h2>Star Wars - Battle Quotes</h2>
+                    </div>
 
-  <div>
-    <h2>Replace last quote written by Master Yoda with a quote written by Darth Vadar</h2>
-    <button id="update"> Darth Vadar invades! </button>
-  </div>
+                    <form action="/quotes" method="POST">
+                        <input type="text" placeholder="name" name="name">
+                        <input type="text" placeholder="quote" name="quote">
+                        <button type="submit">Submit</button>
+                      </form>
+                    
+                      <div>
+                        <h2>Replace last quote written by Master Yoda with a quote written by Darth Vader</h2>
+                        <button id="update"> Darth Vader invades! </button>
+                      </div>
+                    
+                      <div>
+                        <h2>Delete Darth Vadar's first quote</h2>
+                        <button id="delete"> Delete first Darth Vader quote </button>
+                      </div>
+            </div>
+            <div class="col-md-9">
+                 <ul class="quotes">
+                    <% for(var i=0; i<quotes.length; i++) {%>
+                       <div class="<%= quotes[i].name %>">
+                           <li class="quote">
+                            <span><%= quotes[i].name %></span>
+                            <span><%= quotes[i].quote %></span>
+                              </li>
+                              </div>
+                            <% } %>
+                            </ul>
+            </div>
+        </div>
+    </div>
 
-  <div>
-    <h2>Delete Darth Vadar's first quote</h2>
-    <button id="delete"> Delete first Darth Vadar quote </button>
-  </div>
+
+
+
+ 
 
   <script src="main.js"></script>
 </body>
