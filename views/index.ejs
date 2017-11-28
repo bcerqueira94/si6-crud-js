@@ -1,21 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Star Wars - Battle Quotes</title> 
+  <title>Star Wars - Battle Quotes</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/starwars.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+    crossorigin="anonymous">
 </head>
+
 <body>
 
-    <div class="container">
-        <div class="row justify-content-md-center">
-            <div class="col-md-3">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-md-3">
 
-                    <div>
-                        <h2>Star Wars - Battle Quotes</h2>
-                    </div>
+        <div>
+          <img src="img/logo.png" class="logo">
+        </div>
 
+        <div class="container">
+          <div class="row justify-content-md-center">
+              <div id="container">
+                  <div id="burger">
+                    <div class="bun top"></div>
+                    <div class="filling"></div>
+                    <div class="bun bottom"></div>
+                  </div>
+                </div>
+          </div>
+          <div class="row" style="position:absolute">
+              <nav>
+                Menu
+                 <!-- <ul>
+                    <li>
+                      <a href="#">Home</a>
+                    </li>
+                    <li class="green">
+                      <a href="#">Jedi</a>
+                    </li>
+                    <li class="red">
+                      <a href="#">Sith</a>
+                    </li>
+                    <li class="yellow">
+                      <a href="#">Sentinel</a>
+                    </li>
+                    <li class="purple">
+                      <a href="#">Samuel L. Jackson</a>
+                    </li>
+                  </ul>-->
+                </nav>
+          </div>
+        </div>
+        
+
+
+        <!--
                     <form action="/quotes" method="POST">
                         <input type="text" placeholder="name" name="name">
                         <input type="text" placeholder="quote" name="quote">
@@ -30,9 +72,9 @@
                       <div>
                         <h2>Delete Darth Vadar's first quote</h2>
                         <button id="delete"> Delete first Darth Vader quote </button>
-                      </div>
+                      </div>-->
             </div>
-            <div class="col-md-9">
+            <div class="col-md-9"><!--
                  <ul class="quotes">
                     <% for(var i=0; i<quotes.length; i++) {%>
                        <div class="<%= quotes[i].name %>">
@@ -44,14 +86,12 @@
                             <% } %>
                             </ul>
             </div>
-        </div>
+        </div>-->
     </div>
 
-
-
-
- 
-
-  <script src="main.js"></script>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src="js/starwars.js"></script>
+        <script src="main.js"></script>
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 body {
     background-image:url(../img/background.jpg);
     background-size:100% auto;
+    padding: 50px 0px 0px 0px;
 }
 
 .Yoda {
@@ -15,9 +16,13 @@ body {
 
 li {
     margin:10px;
-    min-height:80px;
+    min-height:25px;
 }
 
 ul {
     max-width:1000px;
 }   
+
+.logo {
+    width:250px;
+}
