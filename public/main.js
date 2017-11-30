@@ -7,7 +7,7 @@ update.addEventListener('click', function () {
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
           'name': 'Darth Vader',
-          'quote': 'I find your lack of faith disturbing.'
+          'quote': 'I can feel its immense power, come to my side and together we will dominate the galaxy.'
         })
       })
       .then(res => {

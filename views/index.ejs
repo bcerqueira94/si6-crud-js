@@ -3,12 +3,16 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="img/fav.png" />
   <title>Star Wars - Battle Quotes</title>
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
     crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/starwars.css">
+
+
 </head>
 
 <body>
@@ -21,7 +25,7 @@
         <div>
           <img src="img/logo.png" class="logo">
         </div>
-        <div id="container"  onmouseover="playclip();">
+        <div id="container" onmouseover="playclip();">
 
 
           <audio>
@@ -44,39 +48,41 @@
               something he taught? Tell me down.</p>
             <form action="/quotes" method="POST">
               <input type="text" placeholder="name" name="name" value="Yoda" style="display: none">
-              <input type="text" placeholder="Type here..." name="quote" required>
-              <button type="submit" class="btn btn-primary btn-lg outline green">Submit</button>
+              <input type="text" placeholder="Type here..." name="quote" class="campo" maxlength="70" required>
+              <button type="submit" class="btn btn-primary btn-lg outline green">Speak  </button>
             </form>
 
             <p>Hmm I can feel a bad energy coming from you, we can not let happen what happened to Anakin Skywalke.
               <br>Do not let Darth Vader enter your mind!</p>
-            <button id="update" class="btn btn-primary btn-lg outline red"> Darth Vader invades! </button>
+            <button id="update" class="btn btn-primary btn-lg outline red"> Listen to Darth Vader </button>
 
             <p>
               <br>Hurry, this is getting serious! Ask for help on the bright side of the force!
               <br>I hope you get well.</p>
-            <button id="delete" class="btn btn-primary btn-lg outline blue"> Delete first Darth Vader quote </button>
+            <button id="delete" class="btn btn-primary btn-lg outline blue"> Request Help  </button>
 
           </nav>
         </div>
       </div>
-      <div class="col-md-9">
-
+      <div class="col-md-9" style="padding-top:130px;">
 
         <ul class="quotes">
           <% for(var i=0; i<quotes.length; i++) {%>
             <div class="borda<%= quotes[i].name %> <%= quotes[i].name %>">
               <li class="quote">
-                <span>
+                <span class="name">
                   <%= quotes[i].name %>
                 </span>
-                <span>
+                <br>
+                <span class="fala">
                   <%= quotes[i].quote %>
                 </span>
+
               </li>
             </div>
             <% } %>
         </ul>
+
       </div>
     </div>
   </div>
