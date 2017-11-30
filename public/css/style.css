@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 body {
     background-image:url(../img/background.jpg);
     background-size:100% auto;
-    padding: 50px 0px 0px 0px;
+    padding: 50px 0px 20px 0px;
+    font-family: 'Roboto', sans-serif !important;
+    font-size:11px !important;
+    color:#fff;
+}
+
+.quote{
+    min-height: 60px;
 }
 
 .Yoda {
@@ -26,3 +35,137 @@ ul {
 .logo {
     width:250px;
 }
+
+.txc {
+    text-align:center;
+}
+
+input {
+    
+}
+
+p {
+    padding:20px;
+}
+
+/**************************
+  DEFAULT BOOTSTRAP STYLES
+**************************/
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 10px !important;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 10px 16px;
+  }
+    
+  .btn-lg {
+    font-size: 10px;
+    line-height: 1.33;
+    border-radius: 6px;
+  }
+  
+  .btn-primary {
+    color: #fff;
+    background-color: #fff;
+    border-color: #fff;
+  }
+  
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-primary:active,
+  .btn-primary.active,
+  .open .dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #fff;
+    border-color: #fff;
+  }
+  
+  /***********************
+    OUTLINE BUTTONS
+  ************************/
+  
+  .btn.outline {
+      background: none;
+      padding: 12px 22px;
+  }
+  .btn-primary.outline {
+      border: 1px solid #fff;
+      color: #fff;
+      box-shadow:red 0px 0px 10px;
+      text-shadow:red 0px 0px 15px;
+  }
+  .btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
+
+      background: none;
+      color: #fff;
+      border-color: #fff;
+  }
+
+  .btn-primary.outline:active, .btn-primary.outline:active {
+
+      background: none !important;
+      color: #fff !important;
+      border-color: #fff !important;
+  }
+
+  .red:hover{
+    box-shadow:red 0px 0px 25px !important;
+    text-shadow:red 0px 0px 30px !important;
+  }
+
+  .red {
+    box-shadow:red 0px 0px 15px !important;
+    text-shadow:red 0px 0px 20px !important;
+  }
+
+  .green {
+    box-shadow:limegreen 0px 0px 10px  !important;
+    text-shadow:limegreen 0px 0px 15px  !important;
+  }
+
+  .green:hover{
+    box-shadow:limegreen 0px 0px 25px !important;
+    text-shadow:limegreen 0px 0px 30px !important;
+  }
+
+  .blue {
+    box-shadow:#4df 0px 0px 10px !important;
+    text-shadow:#4df 0px 0px 15px  !important;
+  }
+
+  .blue:hover {
+    box-shadow:#4df 0px 0px 20px !important;
+    text-shadow:#4df 0px 0px 25px  !important;
+  }
+
+  
+  
+  /***********************
+    CUSTON BTN VALUES
+  ************************/
+  
+  .btn {
+      padding: 14px 24px;
+      border: 0 none;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+  }
+  .btn:focus, .btn:active:focus, .btn.active:focus {
+      outline: 0 none;
+  }

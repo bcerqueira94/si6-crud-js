@@ -4,94 +4,95 @@
 <head>
   <meta charset="UTF-8">
   <title>Star Wars - Battle Quotes</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/starwars.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
     crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/starwars.css">
 </head>
 
 <body>
 
+
+
   <div class="container">
     <div class="row justify-content-md-center">
-      <div class="col-md-3">
-
+      <div class="col-md-3 txc">
         <div>
           <img src="img/logo.png" class="logo">
         </div>
+        <div id="container"  onmouseover="playclip();">
 
-        <div class="container">
-          <div class="row justify-content-md-center">
-              <div id="container">
-                  <div id="burger">
-                    <div class="bun top"></div>
-                    <div class="filling"></div>
-                    <div class="bun bottom"></div>
-                  </div>
-                </div>
+
+          <audio>
+            <source src="music/hover.mp3">
+            <source src="music/hover.ogg">
+          </audio>
+          <div id="sounddiv">
+            <bgsound id="sound">
           </div>
-          <div class="row" style="position:absolute">
-              <nav>
-                Menu
-                 <!-- <ul>
-                    <li>
-                      <a href="#">Home</a>
-                    </li>
-                    <li class="green">
-                      <a href="#">Jedi</a>
-                    </li>
-                    <li class="red">
-                      <a href="#">Sith</a>
-                    </li>
-                    <li class="yellow">
-                      <a href="#">Sentinel</a>
-                    </li>
-                    <li class="purple">
-                      <a href="#">Samuel L. Jackson</a>
-                    </li>
-                  </ul>-->
-                </nav>
+
+          <div id="burger">
+            <div class="bun top"></div>
+            <div class="filling"></div>
+            <div class="bun bottom"></div>
           </div>
         </div>
-        
+        <div class="row" style="position:absolute">
+          <nav>
+            <p>Hello great Padawan, after a long period of training, you must have learned a lot with Master Yoda, do you remember
+              something he taught? Tell me down.</p>
+            <form action="/quotes" method="POST">
+              <input type="text" placeholder="name" name="name" value="Yoda" style="display: none">
+              <input type="text" placeholder="Type here..." name="quote" required>
+              <button type="submit" class="btn btn-primary btn-lg outline green">Submit</button>
+            </form>
+
+            <p>Hmm I can feel a bad energy coming from you, we can not let happen what happened to Anakin Skywalke.
+              <br>Do not let Darth Vader enter your mind!</p>
+            <button id="update" class="btn btn-primary btn-lg outline red"> Darth Vader invades! </button>
+
+            <p>
+              <br>Hurry, this is getting serious! Ask for help on the bright side of the force!
+              <br>I hope you get well.</p>
+            <button id="delete" class="btn btn-primary btn-lg outline blue"> Delete first Darth Vader quote </button>
+
+          </nav>
+        </div>
+      </div>
+      <div class="col-md-9">
 
 
-        <!--
-                    <form action="/quotes" method="POST">
-                        <input type="text" placeholder="name" name="name">
-                        <input type="text" placeholder="quote" name="quote">
-                        <button type="submit">Submit</button>
-                      </form>
-                    
-                      <div>
-                        <h2>Replace last quote written by Master Yoda with a quote written by Darth Vader</h2>
-                        <button id="update"> Darth Vader invades! </button>
-                      </div>
-                    
-                      <div>
-                        <h2>Delete Darth Vadar's first quote</h2>
-                        <button id="delete"> Delete first Darth Vader quote </button>
-                      </div>-->
+        <ul class="quotes">
+          <% for(var i=0; i<quotes.length; i++) {%>
+            <div class="borda<%= quotes[i].name %> <%= quotes[i].name %>">
+              <li class="quote">
+                <span>
+                  <%= quotes[i].name %>
+                </span>
+                <span>
+                  <%= quotes[i].quote %>
+                </span>
+              </li>
             </div>
-            <div class="col-md-9"><!--
-                 <ul class="quotes">
-                    <% for(var i=0; i<quotes.length; i++) {%>
-                       <div class="<%= quotes[i].name %>">
-                           <li class="quote">
-                            <span><%= quotes[i].name %></span>
-                            <span><%= quotes[i].quote %></span>
-                              </li>
-                              </div>
-                            <% } %>
-                            </ul>
-            </div>
-        </div>-->
+            <% } %>
+        </ul>
+      </div>
     </div>
+  </div>
+  <div class="col-md-3 falas">
 
-        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        <script src="js/starwars.js"></script>
-        <script src="main.js"></script>
+  </div>
+  <div class="col-md-9">
+
+  </div>
+  </div>
+  </div>
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script type="text/javascript" src="js/sound-mouseover.js"></script>
+  <script src="js/starwars.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>
