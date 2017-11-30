@@ -73,10 +73,6 @@ p {
     padding:20px;
 }
 
-/**************************
-  DEFAULT BOOTSTRAP STYLES
-**************************/
-
 .btn {
     display: inline-block;
     padding: 6px 12px;
@@ -119,10 +115,6 @@ p {
     background-color: #fff;
     border-color: #fff;
   }
-  
-  /***********************
-    OUTLINE BUTTONS
-  ************************/
   
   .btn.outline {
       background: none;
@@ -178,12 +170,6 @@ p {
     text-shadow:#4df 0px 0px 25px  !important;
   }
 
-  
-  
-  /***********************
-    CUSTON BTN VALUES
-  ************************/
-  
   .btn {
       padding: 14px 24px;
       border: 0 none;
